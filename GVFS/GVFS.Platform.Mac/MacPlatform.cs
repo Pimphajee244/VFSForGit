@@ -22,6 +22,10 @@ namespace GVFS.Platform.Mac
             return string.IsNullOrWhiteSpace(result.Output) ? result.Errors : result.Output;
         }
 
+        public override void InitializeStorageMapping(string dotGVFSRoot, string workingDirectoryRoot)
+        {
+        }
+
         public override FileBasedLock CreateFileBasedLock(
             PhysicalFileSystem fileSystem,
             ITracer tracer,
